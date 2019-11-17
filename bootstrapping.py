@@ -4,8 +4,8 @@
 # Output: numpy vector z of B rows, 1 column
 
 import numpy as np
-import sol_probclearn
-import sol_probcpredict
+import probclearn
+import probcpredict
 
 
 def run(B, X, y):
@@ -32,15 +32,16 @@ def run(B, X, y):
 
         index = 0
         for j in range(n):
+
             X_train[index] = X[int(u[j])]
             y_train[index] = y[int(u[j])]
             index += 1
 
-        q, mu_positive, mu_negative, sigma2_positive, sigma2_negative = sol_probclearn.run(X_train, y_train)
+        q, mu_positive, mu_negative, sigma2_positive, sigma2_negative = probclearn.run(X_train, y_train)
         z[i] = 0
 
         for t in T:
-            if y[t] != sol_probcpredict.run(q, mu_positive, mu_negative, sigma2_positive, sigma2_negative,
+            if y[t] != probcpredict.run(q, mu_positive, mu_negative, sigma2_positive, sigma2_negative,
                                             np.array([X[t]]).T):
                 z[i] += 1
 
