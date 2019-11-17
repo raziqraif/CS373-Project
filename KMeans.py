@@ -27,7 +27,7 @@ class KMeans:
         self.centroids = None
         self.classifications = None
 
-    def fit(self, data):
+    def fit(self, data, X):
         """ Group the data into clusters """
         self.centroids = {}
 
