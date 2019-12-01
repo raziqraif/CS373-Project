@@ -1,6 +1,8 @@
 
 data = {}
 
+# common.txt has a list of commonly used English words.
+# read the words from common.txt and store them
 f = open('common.txt', 'r')
 while(True):
     line = f.readline()[:-1] # consume newline
@@ -8,6 +10,8 @@ while(True):
         break
     data[line] = []
 
+# glove.txt has the glove vectors (features) of a set of English words
+# read through the dataset, and if the word is a 'common' word, we store its features
 f = open('glove50.txt', 'r')
 while(True):
     line = f.readline()[:-1] # consume newline
@@ -18,6 +22,8 @@ while(True):
         for xi in line[1:]:
             data[line[0]].append(float(xi))
 
+# pos.txt has the labels of a set of English words (noun vs non-nouns)
+# append the labels to the corresponding words
 f = open('pos.txt', 'r')
 while(True):
     line = f.readline()[:-1] # consume newline
