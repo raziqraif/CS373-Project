@@ -2,7 +2,6 @@ import numpy as np
 import numpy.linalg as la
 import math
 
-
 # Input: scalar q
 #        numpy vector mu_positive of d rows, 1 column
 #        numpy vector mu_negative of d rows, 1 column
