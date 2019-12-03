@@ -1,0 +1,3 @@
+Python version 2.7.15+ was used in this project. All necessary libraries can be installed simply using pip.
+
+From the home directory of the project, running the commands "python source/test.py KMeans" or "python source/test.py SVM" will generate (K or C) and B vs Accuracy graphs using the specified method/classifier.

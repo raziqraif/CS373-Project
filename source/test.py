@@ -5,7 +5,7 @@ X = [] # 50-dimensional GloVe vector
 y = [] # label, 0 or 1
 
 print("reading data...")
-f = open('../dataset/data.txt', 'r')
+f = open('dataset/data.txt', 'r')
 while(True):
     line = f.readline()[:-1] # consume newline
     if(not line):
@@ -31,11 +31,12 @@ import KMeans
 
 import sys
 
-Bmin, Bmax, Bstep = 1, 20, 1
 if(sys.argv[1] == "SVM"):
+    Bmin, Bmax, Bstep = 1, 20, 1
     Cmin, Cmax, Cstep = 0.1, 2, 0.1
 else:
-    Cmin,Cmax,Cstep = 1, 100, 5
+    Bmin, Bmax, Bstep = 1, 40, 2
+    Cmin,Cmax,Cstep = 1, 40, 5
 samples = 20
 accuracy = []
 Brange = np.arange(Bmin, Bmax, Bstep)
