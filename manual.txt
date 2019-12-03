@@ -1,3 +1,20 @@
-Python version 2.7.15+ was used in this project. All necessary libraries can be installed simply using pip.
+1. Run Instruction
 
-From the home directory of the project, running the commands "python source/test.py KMeans" or "python source/test.py SVM" will generate (K or C) and B vs Accuracy graphs using the specified method/classifier.
+  This program must be run from the project's root directory.
+
+  Command:
+      python source/test.py SVM  (For SVM algorithm)
+      python source/test.py KMeans   (For KMeans algorithm)
+
+  After running, the program will generate "out.png" which is the plot of (B or C) and K vs Accuracy.
+
+2. Libraries
+
+  Python version 2.7.15+ was used in this project.
+
+  Additional libraries used were:
+      - sklearn
+      - numpy
+      - matplotlib
+
+  All of the libraries can be installed with pip install <library-name>.
