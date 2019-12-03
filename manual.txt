@@ -1,0 +1,18 @@
+1. Run Instruction
+
+This program must be run from the source/ directory.
+
+Command:
+    python test.py SVM  (For SVM algorithm)
+    python test.py KMeans   (For KMeans algorithm)
+
+After running, the program will generate "test.png" which is the plot of (B or C) and K vs Accuracy.
+
+2. Libraries
+
+Additional libraries used:
+    - sklearn
+    - numpy
+    - matplotlib
+
+All of the libraries can be installed with pip install <library-name>
