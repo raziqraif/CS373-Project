@@ -1,4 +1,3 @@
-
 data = {}
 
 # common.txt has a list of commonly used English words.
@@ -33,6 +32,7 @@ while(True):
     if(line[0] in data.keys()):
         data[line[0]].append("N" in line[1])
 
+# print compiled data in order, to be piped to file
 for key, value in sorted(data.iteritems()):
     if(len(value)%50 != 1 or len(value) < 2):
         continue
@@ -40,4 +40,3 @@ for key, value in sorted(data.iteritems()):
     for pt in value:
         print pt,
     print
-

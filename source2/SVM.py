@@ -6,12 +6,18 @@ import numpy as np
 # return: trained sklearn SVC Classifier.
 def train(X, y, lamb):
     from sklearn.svm import SVC
-    svc = SVC(kernel='poly', degree=4, C=lamb)
-    svc.fit(X, y)
-    return svc
+    ret = SVC(kernel='poly', degree=10, C=lamb, gamma='auto')
+    # print(X, y)
+    try:
+        ret.fit(X, y)
+    except ValueError:
+        return -1
+    return [ret]
 
 # X: list of d-dimensional points to classify.
 # svc: SVCClassifier as returned by train() above.
 # return: predicted labels associated with the vectors in X.
 def test(X, svc):
-    return svc.predict(X)
+    if(svc == -1):
+         return np.ones(len(X))
+    return svc[0].predict(X)
