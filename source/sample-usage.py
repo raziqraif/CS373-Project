@@ -1,5 +1,5 @@
 import numpy as np
-import bootstrapping as bs
+import bootstrap as bs
 
 # data vars
 words = []

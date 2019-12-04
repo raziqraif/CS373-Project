@@ -1,12 +1,15 @@
 from sklearn.cluster import KMeans
 import numpy as np
 import numpy.linalg as la
+import warnings
 
 # X: list of d-dimensional points (example: [[x0, y0], [x1, y1], ...])
 # k: number of centers (example: 3)
 # returns: list of k d-dimensional cluster centers, list of k labels.
 def train(X, y, k):
-    kmeans = KMeans(n_clusters=int(k), random_state=0).fit(X)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        kmeans = KMeans(n_clusters=int(k), random_state=0).fit(X)
     centers = kmeans.cluster_centers_
 
     # count number of nouns and non-nouns closest to each center
