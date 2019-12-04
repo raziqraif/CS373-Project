@@ -3,8 +3,8 @@
   This program must be run from the project's root directory.
 
   Command:
-      python source/test.py SVM  (For SVM algorithm)
-      python source/test.py KMeans   (For KMeans algorithm)
+      python source/run.py SVM  (For SVM algorithm)
+      python source/run.py KMeans   (For KMeans algorithm)
 
   After running, the program will generate "out.png" which is the plot of (B or C) and K vs Accuracy.
 
