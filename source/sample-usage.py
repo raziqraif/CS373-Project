@@ -1,12 +1,11 @@
 import numpy as np
-import bootstrap as bs
 
 # data vars
 words = []
 X = []
 y = []
 
-f = open('data.txt', 'r')
+f = open('../dataset/data.txt', 'r')
 s = 0
 while(True):
     line = f.readline()[:-1]
@@ -31,4 +30,3 @@ while(True):
 
 X = np.asarray(X)
 y = np.asarray(y)
-print bs.run(100, X, y)
