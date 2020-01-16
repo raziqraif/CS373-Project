@@ -1,3 +1,4 @@
+# Details
 dataset/data.txt:
 
     Contains the cleaned and combined data. Each line is a sample, consisting of
@@ -32,3 +33,6 @@ source/sample-usage.py:
 source/SVM.py:
 
     ...
+# Results
+![](results/svm.png)
+![](results/kmeans.png)
